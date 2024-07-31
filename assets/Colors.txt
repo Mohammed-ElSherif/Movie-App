@@ -1,0 +1,3 @@
+mainColor = FFBB3B
+ shodow Color = FFC04B 
+  SingUp or LogIn buttoms Size =  h=66   / w=285 
