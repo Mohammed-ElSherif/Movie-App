@@ -28,11 +28,11 @@ class CustomUserAuth extends StatelessWidget {
               )),
         ),
         const SizedBox(
-          height: 15,
+          height: 5,
         ),
          Text(
           textName,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ],
     );

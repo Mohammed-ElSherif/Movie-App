@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:movieapp/features/auth/screens/widgets/custom_button.dart';
 import 'package:movieapp/features/auth/screens/widgets/custom_user_auth.dart';
+import 'package:movieapp/features/home/screen/home_screen.dart';
 
+import 'widgets/custom_back_button.dart';
 import 'widgets/custom_input_user.dart';
 
 class SignupSecreen extends StatelessWidget {
@@ -19,42 +21,49 @@ class SignupSecreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 14),
             child: SingleChildScrollView(
               child: Column(children: [
+                CustomBackButton(),
                 CustomUserAuth(
                   textName: "Sing Up",
                 ),
                 Form(
                   child: Column(children: [
                     CustomInputUser(
+                      hintTexts: "First Name Here",
                       inputName: "First Name",
                     ),
                     SizedBox(
                       height: 10,
                     ),
                      CustomInputUser(
+                      hintTexts: "Last Name Here",
                       inputName: "Last Name",
                     ),
                     SizedBox(
                       height: 10,
                     ),
                      CustomInputUser(
+                      hintTexts: "Email Here",
                       inputName: "Email",
                     ),
                     SizedBox(
                       height: 10,
                     ),
                      CustomInputUser(
+                      hintTexts: "Password Here",
                       inputName: "Password",
                     ),
                     SizedBox(
                       height: 10,
                     ),
                      CustomInputUser(
+                      hintTexts: "Conform Password here",
                       inputName: "Confrom Password",
                     ),
                     SizedBox(
                       height: 10,
                     ),
-                    CustomButton(inputName: "Sign Up")
+                    CustomButton(navRoute:HomeScreen(),
+                      inputName: "Sign Up")
                   ]),
                 ),
               ]),

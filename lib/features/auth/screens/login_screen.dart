@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movieapp/core/color.dart';
 import 'package:movieapp/features/auth/screens/forgot_password_screen.dart';
 import 'package:movieapp/features/auth/screens/signup_secreen.dart';
+import 'package:movieapp/features/home/screen/home_screen.dart';
 
 import 'widgets/custom_button.dart';
 import 'widgets/custom_input_user.dart';
@@ -33,12 +34,14 @@ class LoginScreen extends StatelessWidget {
                       child: Column(
                     children: [
                       const CustomInputUser(
+                        hintTexts: "Email Here",
                         inputName: "EMAIL",
                       ),
                       const SizedBox(
                         height: 30,
                       ),
                       const CustomInputUser(
+                        hintTexts: "Password Here",
                         inputName: "PASSWORD",
                       ),
                     ],
@@ -63,7 +66,9 @@ class LoginScreen extends StatelessWidget {
                     height: 20,
                   ),
                   const CustomButton(
+                    navRoute: HomeScreen(),
                     inputName: "LOGIN",
+                    
                   ),
                   const SizedBox(
                     height: 10,
