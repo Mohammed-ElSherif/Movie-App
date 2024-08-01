@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movieapp/core/color.dart';
+import 'package:movieapp/features/auth/screens/forgot_password_screen.dart';
 import 'package:movieapp/features/auth/screens/signup_secreen.dart';
 
 import 'widgets/custom_button.dart';
@@ -22,26 +23,40 @@ class LoginScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  const CustomUserAuth(textName: "Log In",),
+                  const CustomUserAuth(
+                    textName: "Log In",
+                  ),
                   const SizedBox(
                     height: 40,
                   ),
-                  const Form(
+                  Form(
                       child: Column(
                     children: [
-                      CustomInputUser(
+                      const CustomInputUser(
                         inputName: "EMAIL",
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      CustomInputUser(
+                      const CustomInputUser(
                         inputName: "PASSWORD",
                       ),
                     ],
                   )),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const ForgotPasswordScreen(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        "Forgot Password",
+                        style: TextStyle(color: MColor.mainColor),
+                      )),
                   const SizedBox(
-                    height: 30,
+                    height: 15,
                   ),
                   const CustomSocialMediaButtons(),
                   const SizedBox(
@@ -76,8 +91,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
